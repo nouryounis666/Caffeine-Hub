@@ -210,59 +210,146 @@ body {
                     cursor: pointer;
                     line-height: 1;
                 }
+.container {
+   width: 100% ;
+    max-width: 1500px;
+    margin: 0 auto ;
+    padding: 0  40px ;
+    box-sizing: border-box ;
+}
 
-<footer>
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-col">
-                    <h3>About us</h3>
-                    <p>At Caffeine-Hub, we believe every cup tells a story. Founded in 2026, our mission is to elevate your daily ritual by sourcing the finest ethical beans and roasting them to perfection. Whether it’s a meticulous pour-over or a silky latte, we’re dedicated to the art of the brew and the community that drinks it.</p>
-                </div>
+footer {
+    background-color: #3b3936;
+    color: #aaa;
+    padding: 60px 0 20px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
 
-                <div class="footer-col">
-                    <h3>Opening Hours</h3>
-                    <ul class="hours-list">
-                        <li>Monday 8AM - 11PM</li>
-                        <li>Tuesday 8AM - 11PM</li>
-                        <li>Wednesday 8AM - 11PM</li>
-                        <li>Thursday 8AM - 11PM</li>
-                        <li>Friday 8AM - 11PM</li>
-                        <li>Weekends 8AM - 11PM</li>
-                    </ul>
-                </div>
+.footer-top {
+   display: flex;                
+    justify-content: space-between;
+    padding: 50px 0;              
+    margin-bottom: 30px;
+}
 
-                <div class="footer-col last-col">
-                    <h3>Contact Details</h3>
-                    <ul class="footer-contact-list">
-                        <li>
-                            <i class="fa-solid fa-location-dot footer-icon icon-red"></i>
-                            33 Al Mesaha, Ad Doqi A, Dokki, Giza Governorate 12611
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-phone footer-icon"></i>
-                            01016221144
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-envelope footer-icon"></i>
-                            Caffeine-Hub@gmail.com
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-globe footer-icon icon-blue"></i>
-                            http://www.Caffeine-Hub.com
-                        </li>
-                    </ul>
-                </div>
-            </div>
+.footer-top::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
-            <div class="footer-bottom">
-                <div class="footer-logo">Caffeine-Hub</div>
-                <p>Copyright 2026. All rights reserved.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+.footer-col {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.footer-col.last-col {
+    margin-right: 0; 
+}
+
+.footer-col h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 25px;;
+    text-transform: capitalize;
+    padding-left: 0px;
+    text-align: left;
+}
+
+.footer-col p {
+    line-height: 1.8;
+}
+
+.hours-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hours-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #4a4845;
+}
+
+.hours-list li:before {
+    content: "› ";
+    margin-right: 8px;
+    color: #dcb38a;
+    font-weight: bold;
+}
+
+.footer-contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-contact-list li {
+    margin-bottom: 18px;
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.5;
+    text-align: left;
+    padding-top: 20px;
+}
+
+.footer-icon {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 14px;
+    color: #888;
+    padding-top: 22px;
+}
+
+.icon-red { color: #ff5e6c; }
+.icon-blue { color: #5bc0de; }
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #4a4845;
+    padding-top: 20px;
+    clear: both;
+}
+
+.footer-logo {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+
+.social-icons {
+    margin-top: 25px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-color: #2b2b2b;
+    color: #666;
+    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #dcb38a;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .footer-col {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .footer-top {
+        flex-direction: column;
+        padding: 30px 0;
+    }
