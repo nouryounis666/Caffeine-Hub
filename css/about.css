@@ -1,0 +1,783 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* ========== Navbar ========== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent;
+    transition: 0.3s;
+}
+.navbar.scrolled {
+    background-color: #2b2b2b !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.navbar ul {
+    display: flex;
+    gap: 1px;
+    list-style: none;
+}
+.navbar li {
+    display: inline-block;
+    padding: 1px;
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.nav-link {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+    border: none;
+}
+/* ========== Header ========== */
+.header {
+    height: 48.3vh;
+    background-image: url("../images/about/fabian-blank-78639.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 6, 6, 0.2);
+    z-index: 1;
+}
+.header .header-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+.header-content h1 {
+    font-size: 60px;
+    font-weight: 400;
+    font-family: 'Alegreya', serif;
+}
+.header-content p {
+    margin-top: 30px;
+    font-size: 22px;
+}
+/* ========== Our Story Section ========== */
+.our-story {
+    background-color: #ffffff;
+}
+.our-story-content {
+    padding: 90px 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+.our-story-img {
+    flex: 1;
+}
+.our-story-content img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.our-story-text {
+    flex: 1;
+    padding: 40px;
+}
+.our-story-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #303030;
+    position: relative;
+}
+.our-story-text h2::after {
+    content: '';
+    display: block;
+    width: 145px;
+    height: 4px;
+    background-color: #9e620e;
+    margin-top: 8px;
+}
+.our-story-text p {
+    font-size: 18px;
+    color: #686868;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+/* ========== Our Goal Section ========== */
+.our-goal {
+    background-color: #f8f8f8;
+}
+.our-goal-content {
+    padding: 90px 150px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 40px;
+}
+.our-goal-img {
+    flex: 1;
+}
+.our-goal-content img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.our-goal-text {
+    flex: 1;
+    padding: 0 90px 0 0;
+}
+.our-goal-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #303030;
+    position: relative;
+}
+.our-goal-text h2::after {
+    content: '';
+    display: block;
+    width: 135px;
+    height: 4px;
+    background-color: #9e620e;
+    margin-top: 8px;
+}
+.our-goal-text p {
+    font-size: 18px;
+    color: #686868;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+/* ========== About Coffee Section ========== */
+.about-coffee {
+    background-color: #ffffff;
+}
+.about-coffee .container {
+    padding: 60px 150px 20px;
+}
+.about-badge {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.about-badge span {
+    display: inline-block;
+    background-color: #f5e6cf;
+    color: #9e620e;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 20px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+.about-title {
+    text-align: center;
+    margin-bottom: 48px;
+}
+.about-title p {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+.about-title span {
+    color: #303030;
+}
+.about-title .about-colored {
+    color: #9e620e;
+}
+.about-main {
+    display: flex;
+    flex-direction: row;
+    padding: 0 150px 100px 150px;
+    gap: 60px;
+    align-items: flex-start;
+}
+.about-content {
+    flex: 1;
+}
+.about-content h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #303030;
+}
+.about-content p {
+    font-size: 16px;
+    color: #686868;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+.about-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 24px;
+    color: #83500b;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid #83500b;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(158, 98, 14, 0.3);
+    transition: all 0.3s ease;
+}
+.about-btn-icon {
+    font-size: 12px;
+    color: #83500b;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+.about-btn:hover {
+    background-color: #83500b;
+    box-shadow: 0 8px 20px rgba(158, 98, 14, 0.4);
+    color: #ffffff;
+}
+.about-btn:hover .about-btn-icon {
+    color: #ffffff;
+}
+.about-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(158, 98, 14, 0.3);
+}
+.about-item {
+    flex: 1.2;
+}
+.about-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 50px;
+}
+.about-item h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.about-item h4 a {
+    text-decoration: none;
+    color: #303030;
+    transition: color 0.3s ease;
+}
+.about-item h4 a:hover {
+    color: #9e620e;
+}
+.about-item p {
+    font-size: 15px;
+    color: #686868;
+    line-height: 1.6;
+}
+.about-icon {
+    color: #9e620e;
+    font-size: 40px;
+    padding: 10px 0;
+}
+/* ========== Clients Section ========== */
+.clients {
+    background-image: url('../images/about/david-von-diemar-287519.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    padding: 80px 80px;
+    color: white;
+    font-family: 'Georgia', serif;
+}
+.clients h2 {
+    text-align: center;
+    font-size: 40px;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+.clients .subtitle {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 60px;
+    color: #ddd;
+}
+.cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.card {
+    flex: 1;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+.card-text {
+    background: rgba(50, 50, 50, 0.3);
+    padding: 30px 25px;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    flex: 1;
+}
+.card-author {
+    margin-top: auto;
+}
+.card-author h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.card-author p {
+    font-size: 14px;
+    color: #ccc;
+}
+/* ========== Footer ========== */
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+.footer {
+    background-color: #2b2b2b;
+    color: #aaa;
+    padding: 60px 0 20px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    margin-bottom: 30px;
+}
+.footer-col {
+    flex: 1;
+    margin-right: 40px;
+}
+.footer-col.last-col {
+    margin-right: 0;
+}
+.footer-col h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    text-align: left;
+}
+.footer-col p {
+    line-height: 1.8;
+}
+.hours-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.hours-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #4a4845;
+}
+.hours-list li:before {
+    content: "› ";
+    margin-right: 8px;
+    color: #dcb38a;
+    font-weight: bold;
+}
+.footer-contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-contact-list li {
+    margin-bottom: 18px;
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.5;
+    text-align: left;
+    padding-top: 20px;
+}
+.footer-icon {
+    position: absolute;
+    left: 0;
+    top: 22px;
+    font-size: 14px;
+    color: #888;
+}
+.icon-red {
+    color: #ff5e6c;
+}
+.icon-blue {
+    color: #5bc0de;
+}
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #4a4845;
+    padding-top: 20px;
+}
+.footer-logo {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+}
+.social-icons {
+    margin-top: 25px;
+}
+.social-icons a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-color: #2b2b2b;
+    color: #666;
+    border-radius: 50%;
+    line-height: 36px;
+    text-align: center;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+}
+.social-icons a:hover {
+    background-color: #dcb38a;
+    color: #fff;
+}
+/* ========== Responsive - Laptop (992px) ========== */
+@media (max-width: 992px) {
+    .header-content h1 {
+        font-size: 48px;
+    }
+    .header-content p {
+        font-size: 18px;
+    }
+    .our-story-content {
+        padding: 60px 40px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .our-story-text {
+        padding: 20px 0;
+    }
+    .our-story-text h2::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .our-goal-content {
+        padding: 60px 40px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .our-goal-text {
+        padding: 20px 0;
+    }
+    .our-goal-text h2::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-coffee .container {
+        padding: 40px 40px 20px;
+    }
+    .about-main {
+        flex-direction: column;
+        padding: 0 40px 60px 40px;
+        gap: 40px;
+        align-items: center;
+    }
+    .about-content {
+        text-align: center;
+    }
+    .about-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 40px;
+        text-align: center;
+    }
+    .clients {
+        padding: 60px 40px;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+    }
+    .card-author {
+        text-align: center;
+    }
+    .footer-col {
+        margin-right: 20px;
+    }
+}
+/* ========== Responsive - Tablet/iPad (768px) ========== */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+    }
+    .nav-link {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    .navbar a {
+        font-size: 14px;
+    }
+    .logo-text {
+        font-size: 16px !important;
+    }
+    .header {
+        height: 40vh;
+    }
+    .header-content h1 {
+        font-size: 36px;
+    }
+    .header-content p {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+    .our-story-content {
+        padding: 40px 20px;
+        gap: 25px;
+    }
+    .our-story-text h2 {
+        font-size: 26px;
+    }
+    .our-story-text p {
+        font-size: 16px;
+    }
+    .our-goal-content {
+        padding: 40px 20px;
+        gap: 25px;
+    }
+    .our-goal-text h2 {
+        font-size: 26px;
+    }
+    .our-goal-text p {
+        font-size: 16px;
+    }
+    .about-coffee .container {
+        padding: 40px 20px 15px;
+    }
+    .about-title p {
+        font-size: 26px;
+    }
+    .about-main {
+        padding: 0 20px 50px 20px;
+    }
+    .about-content h3 {
+        font-size: 24px;
+    }
+    .about-links {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .clients {
+        padding: 50px 20px;
+    }
+    .clients h2 {
+        font-size: 30px;
+    }
+    .clients .subtitle {
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    .card-text {
+        padding: 20px 18px;
+        font-size: 14px;
+    }
+    .container {
+        padding: 0 20px;
+    }
+    .footer-top {
+        flex-direction: column;
+        padding: 30px 0;
+    }
+    .footer-col {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .footer-col h3 {
+        text-align: center;
+    }
+    .footer-contact-list li {
+        text-align: center;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-icon {
+        position: static;
+        display: block;
+        margin-bottom: 5px;
+    }
+    .hours-list li {
+        text-align: center;
+    }
+    .footer-logo {
+        font-size: 22px;
+    }
+}
+/* ========== Responsive - Phone (480px) ========== */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 8px 10px;
+    }
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-link {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+    .navbar a {
+        font-size: 12px;
+    }
+    .logo-text {
+        font-size: 14px !important;
+    }
+    .header {
+        height: 35vh;
+    }
+    .header-content h1 {
+        font-size: 28px;
+    }
+    .header-content p {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .our-story-content {
+        padding: 30px 15px;
+        gap: 20px;
+    }
+    .our-story-text {
+        padding: 10px 0;
+    }
+    .our-story-text h2 {
+        font-size: 22px;
+    }
+    .our-story-text p {
+        font-size: 14px;
+    }
+    .our-goal-content {
+        padding: 30px 15px;
+        gap: 20px;
+    }
+    .our-goal-text {
+        padding: 10px 0;
+    }
+    .our-goal-text h2 {
+        font-size: 22px;
+    }
+    .our-goal-text p {
+        font-size: 14px;
+    }
+    .about-coffee .container {
+        padding: 30px 15px 10px;
+    }
+    .about-title p {
+        font-size: 22px;
+    }
+    .about-title {
+        margin-bottom: 30px;
+    }
+    .about-main {
+        padding: 0 15px 40px 15px;
+        gap: 30px;
+    }
+    .about-content h3 {
+        font-size: 20px;
+    }
+    .about-content p {
+        font-size: 14px;
+    }
+    .about-btn {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+    .about-icon {
+        font-size: 32px;
+    }
+    .about-item h4 {
+        font-size: 17px;
+    }
+    .about-item p {
+        font-size: 13px;
+    }
+    .clients {
+        padding: 40px 15px;
+    }
+    .clients h2 {
+        font-size: 24px;
+    }
+    .clients .subtitle {
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+    .card-text {
+        padding: 18px 15px;
+        font-size: 13px;
+    }
+    .card-author h4 {
+        font-size: 14px;
+    }
+    .card-author p {
+        font-size: 12px;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    .footer-top {
+        padding: 20px 0;
+    }
+    .footer-col h3 {
+        font-size: 15px;
+    }
+    .footer {
+        font-size: 13px;
+        padding: 40px 0 15px;
+    }
+    .footer-logo {
+        font-size: 20px;
+    }
+    .social-icons a {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+    }
+}
