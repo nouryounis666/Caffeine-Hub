@@ -32,7 +32,6 @@ body {
   overflow: hidden;
   color: rgb(255, 255, 255);
   background-attachment: fixed;
-
   width: 100%;
 }
 
@@ -46,7 +45,6 @@ body {
   top: 0;
   left: 0;
   z-index: 2;
-
 }
 
 
@@ -71,15 +69,10 @@ p {
   font-size: 66px;
   margin: 20px 0px;
   font-weight: 500;
-
-
-
 }
 
-/*nav link*/
 
 /*button*/
-
 .home button {
   padding: 15px 28px;
   border-radius: 5px;
@@ -106,7 +99,7 @@ p {
   border: none;
 }
 
-/* About Us (المفعل / المحدد) */
+/* About Us */
 .nav-link.active {
   background-color: white;
   color: black;
@@ -117,7 +110,6 @@ p {
 .nav-link.active:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
-
 }
 
 .navbar a {
@@ -135,8 +127,6 @@ p {
   background-color: white;
   color: black;
 }
-
-
 
 
 /*navbar*/
@@ -219,7 +209,7 @@ p {
   margin: 10px auto;
 }
 
-/**/
+
 .about.container {
   display: flex;
   align-items: center;
@@ -260,22 +250,19 @@ p {
   margin-bottom: 20px;
 }
 
-/* الليست */
+/*list*/
 .about-list ul {
   list-style: none;
-  /* نشيل النقط */
   padding: 0;
   margin: 0;
 }
 
-/* كل عنصر */
 .about-list li {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 15px;
   color: #777;
-
 }
 
 .about-cap h2,
@@ -285,7 +272,6 @@ p {
   padding-left: 0;
 }
 
-/* الأيقونة */
 .about-list li::before {
   content: "☕";
   background: #c7a17a;
@@ -300,8 +286,6 @@ p {
 }
 
 
-
-
 /*counter animation */
 .stats {
   margin: 80px 0;
@@ -310,7 +294,6 @@ p {
   align-items: center;
   background: url("../images/home/photo-1452857104086-714916ddacbe.jpeg") center center no-repeat;
   background-size: cover;
-
   padding: 100px 0;
   color: white;
   text-align: center;
@@ -318,17 +301,15 @@ p {
   overflow: hidden;
 }
 
-/* الطبقة الغامقة */
+/* overlay */
 .stats::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
-  /* درجة الغمقان */
   z-index: 1;
 }
 
-/*الأرقام فوقة */
 .stats .stat {
   position: relative;
   z-index: 2;
@@ -357,11 +338,7 @@ p {
 
 
 
-
-
 /*Our Offer*/
-
-
 
 /*Contact Information */
 
@@ -372,7 +349,6 @@ p {
   justify-content: center;
   width: 100%;
   padding: 90px 0;
-
 }
 
 .contact h2 {
@@ -403,7 +379,6 @@ p {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -440,7 +415,6 @@ p {
   margin: 0 auto;
   padding: 0 40px;
   box-sizing: border-box;
-
 }
 
 footer {
@@ -477,7 +451,6 @@ footer {
   color: #fff;
   font-size: 16px;
   margin-bottom: 25px;
-  ;
   text-transform: capitalize;
   padding-left: 0px;
   text-align: left;
@@ -601,7 +574,7 @@ footer h2 {
 
 
 
-/* ========== MENU ITEMS SECTION ========== */
+/*  MENU ITEMS SECTION  */
 
 .banner h2,
 .banner h3,
@@ -616,7 +589,6 @@ footer h2 {
 .banner {
   text-align: center;
   margin-bottom: 40px;
-  /* مسافة بينه وبين المنيو */
 }
 
 
@@ -723,11 +695,8 @@ footer h2 {
   line-height: 1.8;
 }
 
-/* ===================== */
 /* RESPONSIVE DESIGN */
-/* ===================== */
 
-/* التابلت والموبايل الكبير */
 @media (max-width: 992px) {
 
   .content {
@@ -769,7 +738,7 @@ footer h2 {
 
 @media (max-width: 768px) {
 
-  /* ================= HOME ================= */
+  /* HOME  */
   .content {
     width: 95%;
     margin-top: 140px;
@@ -780,7 +749,7 @@ footer h2 {
     font-size: 32px;
   }
 
-  /* ================= NAVBAR ================= */
+  /* NAVBAR */
   .navbar {
     flex-direction: column;
     height: auto;
@@ -801,7 +770,7 @@ footer h2 {
     margin-top: 10px;
   }
 
-  /* ================= ABOUT ================= */
+  /*  ABOUT */
   .about {
     padding: 50px 15px;
   }
@@ -824,14 +793,14 @@ footer h2 {
     text-align: center;
   }
 
-  /* ================= STATS ================= */
+  /* STATS */
   .stats {
     flex-direction: column;
     gap: 40px;
     padding: 60px 0;
   }
 
-  /* ================= MENU ================= */
+  /*  MENU  */
   .menu-section {
     padding: 30px 15px;
   }
@@ -849,7 +818,7 @@ footer h2 {
     font-size: 13px;
   }
 
-  /* ================= CONTACT ================= */
+  /*  CONTACT */
   .ContactInformation .row {
     flex-direction: column;
   }
@@ -871,7 +840,7 @@ footer h2 {
     height: 300px;
   }
 
-  /* ================= FOOTER ================= */
+  /*  FOOTER */
   .footer-top {
     flex-direction: column;
     gap: 30px;
@@ -894,13 +863,13 @@ footer h2 {
 }
 @media (max-width: 768px) {
 
-  /* ===== NAVBAR FIX ===== */
+  /* NAVBAR FIX */
   .navbar {
-    position: relative; /* مهم جدًا: يمنع التداخل */
+    position: relative; 
     flex-direction: column;
     height: auto;
     padding: 15px 10px;
-    background-color: #2b2b2b; /* يخليها واضحة */
+    background-color: #2b2b2b; 
     z-index: 1000;
   }
 
@@ -911,7 +880,6 @@ footer h2 {
     margin: 10px 0 0 0;
   }
 
-  /* مهم: يمنع اللصق في المحتوى */
   .home {
     padding-top: 80px;
   }
