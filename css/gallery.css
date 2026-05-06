@@ -1,3 +1,10 @@
+body {
+            margin: 0;
+            padding: 0px 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff;
+        }
+
 .nav-link {
   display: inline-block;
   border: 2px solid white;
@@ -72,7 +79,8 @@
     align-items: center;         
     padding: 120px 10% 40px;
     background-color: #eeeeee;
-    margin-top: 0;
+    position: relative; 
+    z-index: 5;
 }
 
 .page-title h1 {
@@ -84,20 +92,17 @@
 .page-title nav {
     font-size: 14px;
 }
-* {
-    box-sizing: border-box;
+
+.home-link {
+    text-decoration: none;       
+    color: #888;
+    transition: 0.3s;
 }
 
-body {
-           font-family: 'Alegreya', serif;
-           -webkit-font-smoothing: antialiased;
-            font-size: 18px;
-            background-color: #fff;
-            font-weight: 400;
-            line-height: 33.48px;
-           
-        
+.home-link:hover {
+    color: #d8b67e;              
 }
+
 
 .header{
     height: 200px;
@@ -107,41 +112,18 @@ body {
     text-align: center;
    
 }
-.page-title {
-    font-size: 40px;
-    font-weight:lighter;
-    letter-spacing: 1px;
-    
-    color: rgb(45, 45, 45);
-}
-.bar{
-    list-style:none;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-     padding: 0;
-}
 
-.bar li a {
-    justify-content: center;
-     text-align: center;
-     text-decoration: none;
-     color: rgb(81, 81, 81);
-     gap: 10px;
-    
-}
 
-.slash {
-     margin: 0 10px;
-}
 
-.container{
+.gallery-container{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 70px 79px;
-    margin: 0px 120px;
+    padding: 60px 5%;
+    max-width: 1400px;
+    margin: 0 auto;    
+    box-sizing: border-box;
    
     
 }
@@ -183,13 +165,12 @@ body {
     .modal{
         display: none;
         position: fixed;
-        z-index: 9999;
+        z-index: 10000;
         top: 0;
         left:0;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
-       opacity: 3;
         justify-content: center;
         align-items: center;
     }
@@ -202,15 +183,16 @@ body {
         } 
         .close-btn {
                     position: absolute;
-                    top: 30px;
-                    right: 50px;
+                    top: 20px;
+                    right: 40px;
                     color: white;
-                    font-size: 60px;
+                    font-size: 50px;
                     font-weight: lighter;
                     cursor: pointer;
-                    line-height: 1;
+                    z-index: 10001;
+                    transition:  0.3s;
                 }
-/* --- Footer Main --- */
+/*  Footer Main  */
  
 .container {
    width: 100% ;
@@ -354,4 +336,6 @@ footer {
     .footer-top {
         flex-direction: column;
         padding: 30px 0;
-    }}
+    }
+    
+ }
