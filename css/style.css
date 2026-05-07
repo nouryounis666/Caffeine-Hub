@@ -129,12 +129,18 @@ p {
   background-color: white;
   color: #dcb38a;
 }
+.nav-link.active-link {
+    text-decoration: underline;
+    text-decoration-color: #dcb38a; 
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 9px; 
+}
 
 /*navbar*/
 .nav {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .navbar {
@@ -158,10 +164,6 @@ p {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.logo {
-  color: white;
-   font-family: 'Playfair Display', serif !important;
-}
 
 .navbar ul {
   display: flex;
