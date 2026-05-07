@@ -16,14 +16,14 @@ const swiper = new Swiper('.slider-wrapper', {
   grabCursor: true,
   spaceBetween: 25,
 
-  // If we need pagination
+  
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
     dynamicBullets: true,
   },
 
-  // Navigation arrows
+  
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -48,10 +48,28 @@ const contactForm = document.getElementById('sendForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(event) {
         event.preventDefault(); 
-        
-        
+
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const subject = document.getElementById('subject');
+        const message = document.getElementById('message');
+
+        const fields = [
+            { element: name, label: "Name" },
+            { element: email, label: "Email" },
+            { element: subject, label: "Subject" },
+            { element: message, label: "Message" }
+        ];
+
+        for (let item of fields) {
+            if (item.element.value.trim() === "") {
+                alert(`Please fill out the ${item.label} field.`);
+                item.element.focus(); 
+                return; 
+            }
+        }
+
         alert('Your message has been sent successfully!');
-        
         this.reset();
     });
 }
