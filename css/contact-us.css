@@ -71,6 +71,12 @@ body {
     background-color: white;
     color: #dcb38a;
 }
+.logo-text {
+    font-size: 27px;
+    font-weight: 700;
+    color: white;
+    padding-top: 5px;
+}
 
 /* ========== Page Header ========== */
 .page-title {
