@@ -1,44 +1,23 @@
-body {
+* {
     margin: 0;
-    padding: 0px 0px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fff;
 }
 
-/*color edits*/
-
-.navbar a {
-    background-color: transparent !important;
-    box-shadow: none;
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    text-shadow: rgb(57, 49, 38) 2px 2px 10px;
+/* =====================================================
+   HEADER (NAVBAR + PAGE TITLE IN ONE HEADER)
+===================================================== */
+#header {
+    position: relative;
+    width: 100%;
 }
 
-.nav-link:hover {
-    background-color: white;
-    color: #dcb38a;
-}
-
-.nav-link {
-    display: inline-block;
-    border: 2px solid white;
-    border-radius: 5px;
-    background-color: transparent;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s ease;
-    border: none;
-}
-
-
-.nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
+/* ================= NAVBAR ================= */
 .navbar {
     position: fixed;
     top: 0;
@@ -49,61 +28,63 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 35px 10px 20px;
-    background-color:  #281e1e;
-    transition: 0.3s;
-    box-sizing: border-box;
-}
-
-.navbar.scrolled {
-    background-color: #281e1e !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    background-color: #281e1e; /* solid from start */
 }
 
 .navbar ul {
     display: flex;
-    gap: 30px;
     list-style: none;
-    margin: 0;
-    padding: 0;
-    
+    gap: 1px;
 }
 
 .navbar li {
-    display: inline-block;
     padding: 1px;
-
 }
 
 .navbar a {
+    background-color: transparent !important;
+    box-shadow: none;
     text-decoration: none;
     color: white;
     font-size: 18px;
-}
-
-.nav-logo {
-    text-decoration: none;
+    text-shadow: rgb(57, 49, 38) 2px 2px 10px;
 }
 
 .logo-text {
-    margin: 0;
+    font-size: 27px;
     color: white;
 }
-.nav-link.active-link {
-    text-decoration: underline;
-    text-decoration-color: #dcb38a; 
-    text-decoration-thickness: 2px; 
-    text-underline-offset: 9px; 
+
+/* NAV LINKS */
+.nav-link {
+    display: inline-block;
+    padding: 12px 15px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
+.nav-link:hover {
+    background-color: white;
+    color: #dcb38a;
+}
+
+.nav-link.active-link {
+    text-decoration: underline;
+    text-decoration-color: #dcb38a;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 9px;
+}
+
+/* ================= PAGE TITLE (KEPT SAME STYLE) ================= */
 .page-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 120px 10% 40px;
+    padding: 120px 10% 40px; /* space for fixed navbar */
     background-color: #eeeeee;
-    position: relative;
-    z-index: 5;
 }
 
 .page-title h1 {
@@ -126,18 +107,9 @@ body {
     color: #d8b67e;
 }
 
-
-.header {
-    height: 200px;
-    background-color: #f7f7f7;
-    padding-top: 20px;
-    padding-bottom: 100px;
-    text-align: center;
-
-}
-
-
-
+/* =====================================================
+   GALLERY
+===================================================== */
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
@@ -146,9 +118,6 @@ body {
     padding: 60px 5%;
     max-width: 1400px;
     margin: 0 auto;
-    box-sizing: border-box;
-
-
 }
 
 .image-wrapper {
@@ -161,42 +130,35 @@ body {
 .image-wrapper img {
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease;
     object-fit: cover;
     display: block;
-
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: .5s;
-}
-
-.image-wrapper:hover .overlay {
-    opacity: 1;
+    transition: transform 0.5s ease;
 }
 
 .image-wrapper:hover img {
     transform: scale(1.1);
 }
 
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+/* =====================================================
+   LIGHTBOX MODAL
+===================================================== */
 .modal {
     display: none;
     position: fixed;
+    inset: 0;
     z-index: 10000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
@@ -206,7 +168,6 @@ body {
     max-width: 85%;
     max-height: 85%;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-
 }
 
 .close-btn {
@@ -217,12 +178,12 @@ body {
     font-size: 50px;
     font-weight: lighter;
     cursor: pointer;
-    z-index: 10001;
     transition: 0.3s;
 }
 
-/*  Footer Main  */
-
+/* =====================================================
+   FOOTER (UNCHANGED)
+===================================================== */
 .container {
     width: 100%;
     max-width: 1500px;
@@ -246,12 +207,6 @@ footer {
     margin-bottom: 30px;
 }
 
-.footer-top::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 .footer-col {
     flex: 1;
     margin-right: 40px;
@@ -265,9 +220,7 @@ footer {
     color: #fff;
     font-size: 16px;
     margin-bottom: 25px;
-    ;
     text-transform: capitalize;
-    padding-left: 0px;
     text-align: left;
 }
 
@@ -286,7 +239,7 @@ footer {
     border-bottom: 1px solid #4a4845;
 }
 
-.hours-list li:before {
+.hours-list li::before {
     content: "› ";
     margin-right: 8px;
     color: #dcb38a;
@@ -304,19 +257,16 @@ footer {
     padding-left: 30px;
     position: relative;
     line-height: 1.5;
-    text-align: left;
     padding-top: 20px;
 }
 
 .footer-icon {
     position: absolute;
     left: 0;
-    top: 2px;
+    top: 22px;
     font-size: 14px;
     color: #888;
-    padding-top: 22px;
 }
-
 .icon-red {
     color: #ff5e6c;
 }
@@ -329,7 +279,6 @@ footer {
     text-align: center;
     border-top: 1px solid #4a4845;
     padding-top: 20px;
-    clear: both;
 }
 
 .footer-logo {
@@ -362,29 +311,12 @@ footer {
     color: #fff;
 }
 
-@media (max-width: 768px) {
-    .footer-col {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 30px;
-    }
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
-    .footer-top {
-        flex-direction: column;
-        padding: 30px 0;
-    }
-
-}
-/* RESPONSIVE  */
-
-/* ========= Tablet ========= */
+/* Tablet */
 @media (max-width: 992px) {
-
-    .gallery-container {
-        gap: 15px;
-        padding: 40px 20px;
-    }
-
     .image-wrapper {
         width: 45%;
         height: 300px;
@@ -395,9 +327,9 @@ footer {
     }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
 
-    /* NAVBAR */
     .navbar {
         flex-direction: column;
         height: auto;
@@ -419,7 +351,6 @@ footer {
         padding: 6px 10px;
     }
 
-    /* PAGE TITLE */
     .page-title {
         flex-direction: column;
         text-align: center;
@@ -431,7 +362,6 @@ footer {
         font-size: 24px;
     }
 
-    /* GALLERY */
     .gallery-container {
         padding: 30px 15px;
         gap: 20px;
@@ -442,7 +372,6 @@ footer {
         height: 280px;
     }
 
-    /* MODAL */
     .modal-content {
         max-width: 95%;
         max-height: 75%;
@@ -453,8 +382,42 @@ footer {
         right: 20px;
         font-size: 40px;
     }
+    
+    .footer-top {
+        flex-direction: column;
+        padding: 30px 0;
+    }
 
+    .footer-col {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
 
+    .footer-col h3 {
+        text-align: center;
+    }
+
+    .footer-contact-list li {
+        text-align: center;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-icon {
+        position: static;
+        margin-bottom: 6px;
+    }
+
+    .hours-list li {
+        text-align: center;
+    }
+}
+
+/* Small phones */
 @media (max-width: 480px) {
 
     .navbar ul {
@@ -476,4 +439,18 @@ footer {
     .image-wrapper {
         height: 220px;
     }
-}}
+       footer {
+        font-size: 13px;
+        padding: 40px 0 15px;
+    }
+
+    .footer-logo {
+        font-size: 22px;
+    }
+
+    .social-icons a {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+    }
+}
