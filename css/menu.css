@@ -1,12 +1,15 @@
-
-body {
+* {
     margin: 0;
     padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fff;
 }
 
-/* ========== Navbar ========== */
+/* ========== NAVBAR ========== */
 .navbar {
     position: fixed;
     top: 0;
@@ -17,31 +20,45 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 0 5px;
+    padding: 10px 20px;
     background: transparent;
     transition: 0.3s;
 }
+
 .navbar.scrolled {
     background-color: #281e1e !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
+
 .navbar ul {
     display: flex;
-    gap: 1px;
     list-style: none;
+    gap: 1px;
 }
+
 .navbar li {
-    display: inline-block;
     padding: 1px;
 }
+
 .nav-link {
-    display: inline-block;
     padding: 12px 15px;
-    background-color: transparent;
     color: white;
+        background-color: transparent;
+
     text-decoration: none;
+    font-size: 18px;
     transition: 0.3s ease;
-    border: none;
+}
+
+.nav-link.active-link {
+    text-decoration: underline;
+    text-decoration-color: #dcb38a;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 9px;
+}
+.nav-link:hover {
+    background-color: white;
+    color: #dcb38a;
 }
 
 .nav-link.active-link {
@@ -60,13 +77,6 @@ body {
     text-shadow: rgb(57, 49, 38) 2px 2px 10px;
 }
 
-.nav-link:hover {
-    background-color: white;
-    color: #dcb38a;
-}
-.nav-logo{
-    padding: 0 15px;
-}
 /* ========== Header ========== */
 .header {
     position: relative;
@@ -101,8 +111,6 @@ body {
     margin-top: 30px;
     font-size: 22px;
 }
-
-
 
 .banner {
     width: 100%;
@@ -248,7 +256,6 @@ footer {
     color: #fff;
     font-size: 16px;
     margin-bottom: 25px;
-    ;
     text-transform: capitalize;
     padding-left: 0px;
     text-align: left;
@@ -356,9 +363,8 @@ footer {
         flex-direction: column;
         padding: 30px 0;
     }
-
-
 }
+
 /*  RESPONSIVE */
 @media (max-width: 992px) {
 
@@ -438,7 +444,7 @@ footer {
     .menu-item p {
         font-size: 13px;
     }
-
+}
 
 @media (max-width: 480px) {
 
@@ -475,4 +481,4 @@ footer {
         height: 32px;
         line-height: 32px;
     }
-}}
+}
