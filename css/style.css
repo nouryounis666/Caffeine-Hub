@@ -9,7 +9,6 @@ body {
   padding: 0;
   font-weight: 400;
   font-style: normal;
-  line-height: 31.62px;
   font-size: 17px;
 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -147,7 +146,7 @@ p {
 
 /* nav links */
 .nav-link {
-  padding: 9px 15px;
+  padding: 11px 15px;
   color: white;
   transition: 0.3s ease;
 }
@@ -517,7 +516,7 @@ p {
 footer {
   background-color: #3b3936;
   color: #aaa;
-  padding: 60px 0 20px;
+  padding: 40px 0 20px;
   font-family: Arial, sans-serif;
   font-size: 15px;
 }
@@ -547,6 +546,7 @@ footer {
 .footer-col h3 {
   color: #fff;
   font-size: 16px;
+  font-weight: 700;
   margin-bottom: 25px;
   text-transform: capitalize;
   text-align: left;
