@@ -160,9 +160,11 @@ body {
 .h2:hover, 
 .read-more:hover, 
 .home-link:hover,
+.post-date:hover
 .list:hover {
   color: #d8b67e;
   cursor: pointer;
+  width: fit-content;
 }
 
 .post-date {
@@ -212,6 +214,7 @@ body {
 .list:hover {
   color: #d8b478;
   cursor: pointer;
+  width: fit-content;
 }
 
 .my-list {
