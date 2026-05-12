@@ -155,6 +155,7 @@ body {
 .post-date,
 .read-more {
   padding-left: 15px;
+  width: fit-content;
 }
 
 .h2:hover, 
